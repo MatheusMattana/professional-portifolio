@@ -1,0 +1,134 @@
+:root {
+  --main-dark-color: #161616;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 640px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1280px) {
+  .navBar-container {
+    height: 110px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-dark-color);
+  }
+
+  .navBar-items-container {
+    margin: auto;
+    width: 1024px;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav.stroke {
+    display: flex;
+    align-items: center;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+  }
+
+  nav.stroke ul li a,
+  nav.fill ul li a {
+    position: relative;
+  }
+
+  nav.stroke ul li a:after,
+  nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+  }
+
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all 0.5s;
+  }
+  nav.stroke ul li a:hover:after {
+    width: 100%;
+  }
+
+  .navBar-items-container li {
+    list-style-type: none;
+  }
+  .navBar-items-container li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .navBar-items-container
+    a
+    .navBar-items-container
+    a:after
+    .navBar-items-container
+    a:before {
+    transition: all 0.5s;
+  }
+
+  .navBar-logo-container,
+  .navBar-logo-container img {
+    height: 100%;
+    transition: ease all 0.5s;
+    transform: scale(0.95);
+  }
+
+  .navBar-logo-container img:hover {
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1);
+  }
+
+  .navBar-navLinks-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+  }
+
+  .navBar-navLinks-container li a {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .navBar-navLinks-container li a:hover {
+    color: white;
+  }
+
+  .nav-downArrow {
+    width: 20px;
+    margin-top: 5px;
+  }
+
+  .blankSpace {
+    width: 200px;
+  }
+}
+
+/* ---------Nav Bar Style starts here--------------- */
+
+/* ---------Nav Bar Style ends here--------------- */
