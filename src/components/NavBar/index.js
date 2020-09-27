@@ -2,7 +2,6 @@ import React from 'react';
 import '../../AppContainer.css';
 
 import logoWhite from '../../assets/navBar/logoWhite.png';
-import downArrow from '../../assets/navBar/downArrowWhite.png';
 
 const NavBar = () => {
   return (
@@ -23,11 +22,11 @@ const NavBar = () => {
               <a href="/">My portifolio</a>
             </li>
           </ul>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
         </nav>
-        <a href="/">
-          <img className="nav-downArrow" src={downArrow} alt="more options" />
-        </a>
-        <div className="blankSpace"></div>
       </div>
     </nav>
   );
