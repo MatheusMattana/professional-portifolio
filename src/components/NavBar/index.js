@@ -49,31 +49,31 @@ const NavBar = () => {
           </button>
         </div>
       </nav>
-      {isNavActive && (
-        <nav className="mobile-container">
-          <nav className="stroke">
-            <ul className="mobile-navLinks-container">
-              <li>
-                <a href="/">What I do?</a>
-              </li>
-              <li>
-                <a href="/">About me</a>
-              </li>
-              <li>
-                <a href="/">My portifolio</a>
-              </li>
-            </ul>
-          </nav>
-          <div className="mobile-blankSpace">
-            <span className="language pt">PT</span>
-            <label className="switch">
-              <input type="checkbox" />
-              <span className="slider"></span>
-            </label>
-            <span className="language eng">EN</span>
-          </div>
+
+      <nav className={`mobile-container ${isNavActive ? 'isActive' : ''}`}>
+        <nav className="stroke">
+          <ul className="mobile-navLinks-container">
+            <li>
+              <a href="/">What I do?</a>
+            </li>
+            <li>
+              <a href="/">About me</a>
+            </li>
+            <li>
+              <a href="/">My portifolio</a>
+            </li>
+          </ul>
         </nav>
-      )}
+        <div className="mobile-blankSpace">
+          <span className="language pt">PT</span>
+          <label className="switch">
+            <input type="checkbox" />
+            <span className="slider"></span>
+          </label>
+          <span className="language eng">EN</span>
+        </div>
+      </nav>
+      {isNavActive && <div className="backgroundBlur"></div>}
     </>
   );
 };

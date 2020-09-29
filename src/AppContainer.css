@@ -18,7 +18,9 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 
 .navBar-items-container {
@@ -26,6 +28,7 @@ ul {
   height: 40px;
   display: flex;
   justify-content: space-between;
+  z-index: 999;
 }
 
 .mobile-navLinks-container {
@@ -39,9 +42,12 @@ ul {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 50vh;
   min-height: 400px;
+  height: 50vh;
   border-radius: 5%;
+  transition: margin ease 0.5s;
+  margin-top: -500px;
+  z-index: 600;
 }
 .navBar-items-container li a,
 .mobile-container li a {
@@ -49,6 +55,15 @@ ul {
   text-decoration: none;
   padding: 20px 0;
   font-size: 1.3rem;
+}
+
+.backgroundBlur {
+  position: absolute;
+  margin-top: auto;
+  z-index: 500;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px);
 }
 
 .navBar-navLinks-container {
@@ -66,7 +81,8 @@ ul {
   transform: scale(0.98);
 }
 
-.inactive {
+.isActive {
+  margin-top: 0;
 }
 
 nav.stroke {
