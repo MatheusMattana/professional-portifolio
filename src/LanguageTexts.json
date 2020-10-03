@@ -1,0 +1,24 @@
+{
+  "English": {
+    "NavBar": {
+      "WhatIDo": "What I do?",
+      "AboutMe": "About me",
+      "MyPortifolio": "My portifolio"
+    },
+    "PresentationText": {
+      "ImMatheus": "I'm Matheus",
+      "IBuildInterfaces": "I design and build user interfaces"
+    }
+  },
+  "Portuguese": {
+    "NavBar": {
+      "WhatIDo": "O que eu faço?",
+      "AboutMe": "Sobre mim",
+      "MyPortifolio": "Meu portifólio"
+    },
+    "PresentationText": {
+      "ImMatheus": "Eu sou o Matheus",
+      "IBuildInterfaces": "Eu projeto e construo interfaces para a web"
+    }
+  }
+}

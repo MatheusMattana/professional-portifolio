@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
   --main-dark-color: #161618;
+  --main-font: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--main-font);
+  margin: 0;
+  padding: 0;
+  height: 200vh;
 }
 
 ul {
@@ -11,6 +21,7 @@ ul {
   outline: none;
 }
 
+/* ---------Nav Bar Style starts here--------------- */
 .navBar-container {
   background-color: var(--main-dark-color);
   width: 100vw;
@@ -21,10 +32,20 @@ ul {
   position: fixed;
   top: 0;
   z-index: 999;
+  transition: background-color 0.5s;
+}
+
+.transparentNavBar {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7511379551820728) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 .navBar-items-container {
-  width: 90vw;
+  width: 85vw;
   height: 40px;
   display: flex;
   justify-content: space-between;
@@ -32,7 +53,7 @@ ul {
 }
 
 .mobile-navLinks-container {
-  width: 90vw;
+  width: 85vw;
 }
 
 .mobile-container {
@@ -42,28 +63,33 @@ ul {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  min-height: 400px;
-  height: 50vh;
+  min-height: 500px;
   border-radius: 5%;
   transition: margin ease 0.5s;
   margin-top: -500px;
   z-index: 600;
+  position: fixed;
 }
 .navBar-items-container li a,
 .mobile-container li a {
   color: #fff;
   text-decoration: none;
-  padding: 20px 0;
+  padding: 30px 0;
   font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .backgroundBlur {
   position: absolute;
   margin-top: auto;
+  left: 0;
+  right: 0;
   z-index: 500;
   width: 100vw;
-  height: 100vh;
-  backdrop-filter: blur(10px);
+  margin: 0 auto;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  height: 1000vh;
 }
 
 .navBar-navLinks-container {
@@ -74,15 +100,18 @@ ul {
   display: none;
 }
 
-.navBar-logo-container,
-.navBar-logo-container img {
+.navBar-logo-container {
   height: 100%;
+}
+.navBar-logo-container img {
+  height: 90%;
   transition: ease all 0.5s;
   transform: scale(0.98);
 }
 
 .isActive {
   margin-top: 0;
+  height: 50vh;
 }
 
 nav.stroke {
@@ -124,6 +153,10 @@ nav.stroke ul li a:hover:after {
   width: 100%;
 }
 
+.mobile-navLinks-container {
+  margin-top: 80px;
+}
+
 .navBar-items-container li,
 .mobile-container li {
   list-style-type: none;
@@ -158,11 +191,17 @@ nav.stroke ul li a:hover:after {
   font-size: 12px;
 }
 
-.pt {
-  margin-right: 10px;
+.mobile-blankSpace {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
 }
 
 .eng {
+  margin-right: 10px;
+}
+
+.pt {
   margin-left: 10px;
 }
 
@@ -241,13 +280,14 @@ input:checked + .slider:before {
   .navBar-navLinks-container li a {
     font-size: 1rem;
   }
-  .blankSpace {
-    display: flex;
-    align-items: center;
-  }
 
   .mobile-container {
     display: none;
+  }
+
+  .blankSpace {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -256,7 +296,81 @@ input:checked + .slider:before {
     width: 1024px;
   }
 }
-
-/* ---------Nav Bar Style starts here--------------- */
-
 /* ---------Nav Bar Style ends here--------------- */
+
+/*-------------------------------------------------*/
+
+/* ------Main Section Style start here----------- */
+.mainSection-container {
+  background-image: url('./assets/mainBackground.png');
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.mainSection-presentationTextContainer {
+  width: 85vw;
+  line-height: 10px;
+}
+
+.mainSection-presentationTextContainer img {
+  position: absolute;
+  width: 200px;
+  margin-top: -70px;
+  margin-left: -20px;
+}
+
+.mainSection-presentationTextContainer h1 {
+  font-size: 46px;
+}
+
+.mainSection-presentationTextContainer p {
+  font-size: 18px;
+  margin-left: 2px;
+  font-weight: 500;
+}
+
+@media (min-width: 640px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+  .mainSection-container {
+    min-height: 800px;
+    background-size: cover;
+  }
+
+  .mainSection-presentationTextContainer {
+    width: 900px;
+  }
+
+  .mainSection-presentationTextContainer img {
+    margin-top: -70px;
+    width: 300px;
+    margin-left: -70px;
+  }
+
+  .mainSection-presentationTextContainer h1 {
+    font-size: 86px;
+  }
+
+  .mainSection-presentationTextContainer p {
+    font-size: 36px;
+    margin-left: 2px;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1280px) {
+  .mainSection-presentationTextContainer {
+    width: 1024px;
+  }
+}

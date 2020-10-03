@@ -1,15 +1,39 @@
 import React, { useState } from 'react';
 import '../../AppContainer.css';
 import '../../hamburgers.css';
+import LanguageTexts from '../../LanguageTexts.json';
+
+import { useLanguage } from '../../context/Language';
 
 import logoWhite from '../../assets/navBar/logoWhite.png';
 
-const NavBar = () => {
+const NavBar = (props) => {
   const [isNavActive, setIsNavActive] = useState(false);
+  const [isScrollDown, setIsScrollDown] = useState(false);
 
+  const { languageSelected, setLanguageSelected } = useLanguage();
+
+  let texts = {};
+  languageSelected === 'English'
+    ? (texts = LanguageTexts.English)
+    : (texts = LanguageTexts.Portuguese);
+
+  window.onscroll = function (event) {
+    this.scrollY > 100 ? setIsScrollDown(true) : setIsScrollDown(false);
+  };
+
+  const changeLanguage = () => {
+    languageSelected === 'English'
+      ? setLanguageSelected('Portuguese')
+      : setLanguageSelected('English');
+  };
   return (
     <>
-      <nav className="navBar-container">
+      <nav
+        className={`navBar-container ${
+          isScrollDown ? '' : 'transparentNavBar'
+        }`}
+      >
         <div className="navBar-items-container">
           <div className="navBar-logo-container">
             <img src={logoWhite} alt="web site logo" />
@@ -17,23 +41,27 @@ const NavBar = () => {
           <nav className="stroke">
             <ul className="navBar-navLinks-container">
               <li>
-                <a href="/">What I do?</a>
+                <a href="/">{texts.NavBar.WhatIDo}</a>
               </li>
               <li>
-                <a href="/">About me</a>
+                <a href="/">{texts.NavBar.AboutMe}</a>
               </li>
               <li>
-                <a href="/">My portifolio</a>
+                <a href="/">{texts.NavBar.MyPortifolio}</a>
               </li>
             </ul>
           </nav>
           <div className="blankSpace">
-            <span className="language pt">PT</span>
+            <span className="language eng">ENG</span>
             <label className="switch">
-              <input type="checkbox" />
+              <input
+                type="checkbox"
+                onClick={() => changeLanguage()}
+                checked={languageSelected === 'English' ? false : true}
+              />
               <span className="slider"></span>
             </label>
-            <span className="language eng">EN</span>
+            <span className="language pt">PT</span>
           </div>
           <button
             className={`hamburger hamburger--collapse ${
@@ -54,26 +82,35 @@ const NavBar = () => {
         <nav className="stroke">
           <ul className="mobile-navLinks-container">
             <li>
-              <a href="/">What I do?</a>
+              <a href="/">{texts.NavBar.WhatIDo}</a>
             </li>
             <li>
-              <a href="/">About me</a>
+              <a href="/">{texts.NavBar.AboutMe}</a>
             </li>
             <li>
-              <a href="/">My portifolio</a>
+              <a href="/">{texts.NavBar.MyPortifolio}</a>
             </li>
           </ul>
         </nav>
         <div className="mobile-blankSpace">
-          <span className="language pt">PT</span>
+          <span className="language eng">ENG</span>
           <label className="switch">
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              onClick={() => changeLanguage()}
+              checked={languageSelected === 'English' ? false : true}
+            />
             <span className="slider"></span>
           </label>
-          <span className="language eng">EN</span>
+          <span className="language pt">PT</span>
         </div>
       </nav>
-      {isNavActive && <div className="backgroundBlur"></div>}
+      {isNavActive && (
+        <div
+          className="backgroundBlur"
+          onClick={() => setIsNavActive(!isNavActive)}
+        ></div>
+      )}
     </>
   );
 };
