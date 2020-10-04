@@ -7,7 +7,14 @@
     },
     "PresentationText": {
       "ImMatheus": "I'm Matheus",
-      "IBuildInterfaces": "I design and build user interfaces"
+      "IBuildInterfaces": "I design and build user interfaces",
+      "LearnMore": "Learn more about what I do"
+    },
+    "WhatIDo": {
+      "Title": "What I do",
+      "FrontEnd": "As a front end developer, that are my skills:",
+      "Javascript": "Javascript (according to ES6)",
+      "Git": "Git for version control"
     }
   },
   "Portuguese": {
@@ -18,7 +25,14 @@
     },
     "PresentationText": {
       "ImMatheus": "Eu sou o Matheus",
-      "IBuildInterfaces": "Eu projeto e construo interfaces para a web"
+      "IBuildInterfaces": "Eu projeto e construo interfaces para a web",
+      "LearnMore": "Saiba mais sobre o que eu faço"
+    },
+    "WhatIDo": {
+      "Title": "O que eu faço",
+      "FrontEnd": "Como desenvolvedor front-end, essas são minhas habilidades:",
+      "Javascript": "Javascript (de acordo com o ES6)",
+      "Git": "Git para o controle de versão"
     }
   }
 }

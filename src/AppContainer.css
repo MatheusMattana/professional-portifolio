@@ -1,18 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/* SUMMARY (search for it on ctrl + F):
+        -NavBar
+        -MainSection
+*/
+
 :root {
   --main-dark-color: #161618;
+  --background-color: #ededed;
   --main-font: 'Inter', sans-serif;
+}
+
+html {
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: var(--main-font);
-  margin: 0;
+  margin: 0 -20px 0 0;
   padding: 0;
   height: 200vh;
+  background-color: var(--background-color);
+  box-sizing: border-box;
 }
 
-ul {
+ul,
+p {
   margin: 0;
   padding: 0;
 }
@@ -21,7 +35,19 @@ ul {
   outline: none;
 }
 
-/* ---------Nav Bar Style starts here--------------- */
+.sectionTitle {
+  color: var(--main-dark-color);
+  font-size: 44px;
+  font-weight: 800;
+}
+
+@media (min-width: 1024px) {
+  .sectionTitle {
+    font-size: 64px;
+  }
+}
+
+/* ---------NavBar Style starts here--------------- */
 .navBar-container {
   background-color: var(--main-dark-color);
   width: 100vw;
@@ -300,15 +326,18 @@ input:checked + .slider:before {
 
 /*-------------------------------------------------*/
 
-/* ------Main Section Style start here----------- */
+/* ------MainSection Style start here----------- */
+
 .mainSection-container {
   background-image: url('./assets/mainBackground.png');
-  height: 100vh;
+  height: 106vh;
+  min-height: 600px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: #fff;
@@ -334,6 +363,28 @@ input:checked + .slider:before {
   font-size: 18px;
   margin-left: 2px;
   font-weight: 500;
+}
+
+.learnMore-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 20px;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  opacity: 0.8;
+}
+
+.learnMore-container img {
+  width: 30px;
+  height: 25px;
+  margin-top: 5px;
+}
+
+.learnMore-container:hover,
+.learnMore-container:hover {
+  opacity: 1;
 }
 
 @media (min-width: 640px) {
@@ -373,4 +424,89 @@ input:checked + .slider:before {
   .mainSection-presentationTextContainer {
     width: 1024px;
   }
+}
+
+/* ------MainSection Style ends here--------------- */
+
+/*-------------------------------------------------*/
+
+/* ------ WhatIDo Style start here---------------- */
+
+.whatIDo-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  margin-top: 120px;
+  flex-direction: column;
+}
+
+.whatIDoTitle-container {
+  width: 80vw;
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  align-items: center;
+}
+
+#whatIDoTitle {
+}
+
+.sectionTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.titleLine {
+  width: avaible;
+  height: 10px;
+  background: #ffffff;
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#rightTitleLine {
+  display: none;
+}
+
+.mySkills-container {
+  margin-top: 20px;
+  width: 80vw;
+  max-width: 1024px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.myDeveloperSkills-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 50px 50px 50px 50px;
+}
+
+.skill-container {
+  display: flex;
+  color: white;
+  margin: 0 30px;
+  background-color: var(--main-dark-color);
+}
+
+.skill-container img {
+  height: 100%;
+}
+
+@media (min-width: 640px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+  #rightTitleLine {
+    display: block;
+  }
+  .whatIDoTitle-container {
+    grid-template-columns: 1fr 350px 1fr;
+  }
+}
+
+@media (min-width: 1280px) {
 }

@@ -23,10 +23,15 @@ const NavBar = (props) => {
   };
 
   const changeLanguage = () => {
-    languageSelected === 'English'
-      ? setLanguageSelected('Portuguese')
-      : setLanguageSelected('English');
+    if (languageSelected === 'English') {
+      setLanguageSelected('Portuguese');
+      window.localStorage.setItem('local-language', 'Portuguese');
+    } else {
+      setLanguageSelected('English');
+      window.localStorage.setItem('local-language', 'English');
+    }
   };
+
   return (
     <>
       <nav

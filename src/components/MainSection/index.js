@@ -10,6 +10,7 @@ import goodNight from '../../assets/mainSection/goodNight.png';
 import bomDia from '../../assets/mainSection/bomDia.png';
 import boaTarde from '../../assets/mainSection/boaTarde.png';
 import boaNoite from '../../assets/mainSection/boaNoite.png';
+import downArrow from '../../assets/mainSection/down-arrow.png';
 
 const MainSection = () => {
   const { languageSelected } = useLanguage();
@@ -47,6 +48,10 @@ const MainSection = () => {
         <img src={getTimeOfDay()} alt="responsive greetings" />
         <h1>{texts.PresentationText.ImMatheus}</h1>
         <p>{texts.PresentationText.IBuildInterfaces}</p>
+      </div>
+      <div className="learnMore-container">
+        <p>{texts.PresentationText.LearnMore}</p>
+        <img src={downArrow} alt="down arrow" />
       </div>
     </div>
   );

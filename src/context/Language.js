@@ -3,7 +3,11 @@ import React, { createContext, useState, useContext } from 'react';
 export const Language = createContext();
 
 export default function LanguageProvider({ children }) {
-  const [languageSelected, setLanguageSelected] = useState('English');
+  let localLanguage;
+  window.localStorage.getItem('local-language') === undefined
+    ? (localLanguage = 'English')
+    : (localLanguage = window.localStorage.getItem('local-language'));
+  const [languageSelected, setLanguageSelected] = useState(localLanguage);
   return (
     <Language.Provider value={{ languageSelected, setLanguageSelected }}>
       {children}
