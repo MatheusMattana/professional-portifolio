@@ -50,8 +50,10 @@ const MainSection = () => {
         <p>{texts.PresentationText.IBuildInterfaces}</p>
       </div>
       <div className="learnMore-container">
-        <p>{texts.PresentationText.LearnMore}</p>
-        <img src={downArrow} alt="down arrow" />
+        <a href="#whatIDo">
+          <p>{texts.PresentationText.LearnMore}</p>
+          <img src={downArrow} alt="down arrow" />
+        </a>
       </div>
     </div>
   );

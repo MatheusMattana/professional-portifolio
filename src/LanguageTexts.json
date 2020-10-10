@@ -13,8 +13,9 @@
     "WhatIDo": {
       "Title": "What I do",
       "FrontEnd": "As a front end developer, that are my skills:",
-      "Javascript": "Javascript (according to ES6)",
-      "Git": "Git for version control"
+      "Designer": "As a web-designer, that are my skills:",
+      "PencilAndPaper": "Pencil and Paper",
+      "References": "Aways looking for new references"
     }
   },
   "Portuguese": {
@@ -31,8 +32,9 @@
     "WhatIDo": {
       "Title": "O que eu faço",
       "FrontEnd": "Como desenvolvedor front-end, essas são minhas habilidades:",
-      "Javascript": "Javascript (de acordo com o ES6)",
-      "Git": "Git para o controle de versão"
+      "Designer": "Como web-designer, essas são minhas habilidades",
+      "PencilAndPaper": "Lápis e Papel",
+      "References": "Sempre buscando referências"
     }
   }
 }
