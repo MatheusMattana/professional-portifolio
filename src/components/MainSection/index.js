@@ -49,11 +49,12 @@ const MainSection = () => {
         <h1>{texts.PresentationText.ImMatheus}</h1>
         <p>{texts.PresentationText.IBuildInterfaces}</p>
       </div>
-      <div className="learnMore-container">
-        <a href="#whatIDo">
-          <p>{texts.PresentationText.LearnMore}</p>
-          <img src={downArrow} alt="down arrow" />
-        </a>
+      <div
+        onClick={() => window.scrollTo({ top: 800, behavior: 'smooth' })}
+        className="learnMore-container"
+      >
+        <p>{texts.PresentationText.LearnMore}</p>
+        <img src={downArrow} alt="down arrow" />
       </div>
     </div>
   );

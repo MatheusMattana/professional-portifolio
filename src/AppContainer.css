@@ -24,6 +24,7 @@ body {
   background-color: var(--background-color);
   box-sizing: border-box;
   overflow-x: hidden;
+  height: 500vh;
 }
 
 a {
@@ -365,8 +366,7 @@ input:checked + .slider:before {
   font-weight: 500;
 }
 
-.learnMore-container,
-.learnMore-container a {
+.learnMore-container {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -376,17 +376,15 @@ input:checked + .slider:before {
   transition: all ease 0.5s;
   opacity: 0.8;
 }
-.learnMore-container a p {
+.learnMore-container p {
   font-size: 15px;
   margin: 6px;
 }
-.learnMore-container a img {
+.learnMore-container img {
   width: 30px;
   height: 25px;
-  margin-top: 5px;
 }
 
-.learnMore-container:hover,
 .learnMore-container:hover {
   opacity: 1;
 }
@@ -493,7 +491,7 @@ input:checked + .slider:before {
 .myDeveloperSkills-container {
   display: grid;
   grid-template-columns: minmax(100px, 1124px);
-  grid-template-rows: repeat(6, 50px);
+  grid-template-rows: 70px repeat(5, 50px);
   grid-row-gap: 10px;
   padding: 10px 20px;
 }
@@ -522,7 +520,7 @@ input:checked + .slider:before {
 .myDesignerSkills-container {
   display: grid;
   grid-template-columns: minmax(100px, 1124px);
-  grid-template-rows: repeat(6, 50px);
+
   grid-row-gap: 10px;
   padding: 10px 20px;
 }
