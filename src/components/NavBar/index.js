@@ -7,7 +7,7 @@ import { useLanguage } from '../../context/Language';
 
 import logoWhite from '../../assets/navBar/logoWhite.png';
 
-const NavBar = (props) => {
+const NavBar = () => {
   const [isNavActive, setIsNavActive] = useState(false);
   const [isScrollDown, setIsScrollDown] = useState(false);
 
@@ -46,7 +46,7 @@ const NavBar = (props) => {
           <nav className="stroke">
             <ul className="navBar-navLinks-container">
               <li>
-                <a href="/">{texts.NavBar.WhatIDo}</a>
+                <a href="#whatIDo">{texts.NavBar.WhatIDo}</a>
               </li>
               <li>
                 <a href="/">{texts.NavBar.AboutMe}</a>
@@ -87,10 +87,24 @@ const NavBar = (props) => {
         <nav className="stroke">
           <ul className="mobile-navLinks-container">
             <li>
-              <a href="/">{texts.NavBar.WhatIDo}</a>
+              <a
+                href="#whatIDo"
+                onClick={() =>
+                  isNavActive ? setIsNavActive(!isNavActive) : ''
+                }
+              >
+                {texts.NavBar.WhatIDo}
+              </a>
             </li>
             <li>
-              <a href="/">{texts.NavBar.AboutMe}</a>
+              <a
+                href="#aboutMe"
+                onClick={() =>
+                  isNavActive ? setIsNavActive(!isNavActive) : ''
+                }
+              >
+                {texts.NavBar.AboutMe}
+              </a>
             </li>
             <li>
               <a href="/">{texts.NavBar.MyPortifolio}</a>

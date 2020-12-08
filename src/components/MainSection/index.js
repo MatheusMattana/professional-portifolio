@@ -50,6 +50,7 @@ const MainSection = () => {
         <p>{texts.PresentationText.IBuildInterfaces}</p>
       </div>
       <div
+        id="whatIDo"
         onClick={() => window.scrollTo({ top: 800, behavior: 'smooth' })}
         className="learnMore-container"
       >

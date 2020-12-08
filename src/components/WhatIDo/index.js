@@ -25,7 +25,7 @@ const WhatIDo = () => {
 
   return (
     <div className="whatIDo-container">
-      <div id="whatIDo" className="whatIDoTitle-container">
+      <div className="Title-container">
         <div id="rightTitleLine" className="titleLine"></div>
         <div className="sectionTitle">
           <i>{texts.WhatIDo.Title}</i>
@@ -38,23 +38,27 @@ const WhatIDo = () => {
             <i>{texts.WhatIDo.FrontEnd}</i>
           </p>
           <div className="skill-container">
-            <img src={IconHtml} className="skillIcon" />
+            <img src={IconHtml} className="skillIcon" alt="html icon" />
             <p className="skillDescription">HTML</p>
           </div>
           <div className="skill-container">
-            <img src={IconCss} className="skillIcon" />
+            <img src={IconCss} className="skillIcon" alt="Css icon" />
             <p className="skillDescription">CSS</p>
           </div>
           <div className="skill-container">
-            <img src={IconJavascript} className="skillIcon" />
+            <img
+              src={IconJavascript}
+              className="skillIcon"
+              alt="javascript icon"
+            />
             <p className="skillDescription">Javascript</p>
           </div>
           <div className="skill-container">
-            <img src={IconReact} className="skillIcon" />
+            <img src={IconReact} className="skillIcon" alt="react icon" />
             <p className="skillDescription">React</p>
           </div>
           <div className="skill-container">
-            <img src={IconGit} className="skillIcon" />
+            <img src={IconGit} className="skillIcon" alt="git icon" />
             <p className="skillDescription">Git</p>
           </div>
         </div>
@@ -63,24 +67,34 @@ const WhatIDo = () => {
             <i>{texts.WhatIDo.Designer}</i>
           </p>
           <div className="skill-container">
-            <img src={IconFigma} className="skillIcon" />
+            <img src={IconFigma} className="skillIcon" alt="figma icon" />
             <p className="skillDescription">Figma</p>
           </div>
           <div className="skill-container">
-            <img src={IconPs} className="skillIcon" />
+            <img src={IconPs} className="skillIcon" alt="photoshop icon" />
             <p className="skillDescription">Photoshop</p>
           </div>
           <div className="skill-container">
-            <img src={IconAi} className="skillIcon" />
+            <img src={IconAi} className="skillIcon" alt="illustrator icon" />
             <p className="skillDescription">Illustrator</p>
           </div>
           <div className="skill-container">
-            <img src={IconPenAndPaper} className="skillIcon" />
+            <img
+              src={IconPenAndPaper}
+              className="skillIcon"
+              alt="pencil and paper icon"
+            />
             <p className="skillDescription">{texts.WhatIDo.PencilAndPaper}</p>
           </div>
           <div className="skill-container">
-            <img src={IconReferences} className="skillIcon" />
-            <p className="skillDescription">{texts.WhatIDo.References}</p>
+            <img
+              src={IconReferences}
+              className="skillIcon"
+              alt="references icon"
+            />
+            <p id="aboutMe" className="skillDescription">
+              {texts.WhatIDo.References}
+            </p>
           </div>
         </div>
       </div>
