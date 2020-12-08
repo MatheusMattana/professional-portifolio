@@ -41,13 +41,12 @@ const MainSection = () => {
     return timeOfDay;
   }
 
+  let hourImage = getTimeOfDay();
+
   return (
     <div className="mainSection-container">
       <div className="mainSection-presentationTextContainer">
-        <img
-          src={(window.onload = getTimeOfDay())}
-          alt="responsive greetings"
-        />
+        <img src={hourImage} alt="responsive greetings" />
         <h1>{texts.PresentationText.ImMatheus}</h1>
         <p>{texts.PresentationText.IBuildInterfaces}</p>
       </div>
