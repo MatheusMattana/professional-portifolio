@@ -20,7 +20,7 @@ const MainSection = () => {
     ? (texts = LanguageTexts.English)
     : (texts = LanguageTexts.Portuguese);
 
-  const getTimeOfDay = () => {
+  function getTimeOfDay() {
     let date = new Date();
     let hours = date.getHours();
     let timeOfDay;
@@ -40,7 +40,9 @@ const MainSection = () => {
       : (timeOfDay = boaNoite);
 
     return timeOfDay;
-  };
+  }
+
+  window.onload = getTimeOfDay();
 
   return (
     <div className="mainSection-container">
