@@ -14,7 +14,6 @@ import downArrow from '../../assets/mainSection/down-arrow.png';
 
 const MainSection = () => {
   const { languageSelected } = useLanguage();
-
   let texts = {};
   languageSelected === 'English'
     ? (texts = LanguageTexts.English)
@@ -38,16 +37,17 @@ const MainSection = () => {
       : languageSelected === 'Portuguese'
       ? (timeOfDay = boaNoite)
       : (timeOfDay = boaNoite);
-
+    console.log(timeOfDay);
     return timeOfDay;
   }
-
-  window.onload = getTimeOfDay();
 
   return (
     <div className="mainSection-container">
       <div className="mainSection-presentationTextContainer">
-        <img src={getTimeOfDay()} alt="responsive greetings" />
+        <img
+          src={(window.onload = getTimeOfDay())}
+          alt="responsive greetings"
+        />
         <h1>{texts.PresentationText.ImMatheus}</h1>
         <p>{texts.PresentationText.IBuildInterfaces}</p>
       </div>
