@@ -453,7 +453,7 @@ input:checked + .slider:before {
   width: 100vw;
   display: flex;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 40px;
   flex-direction: column;
 }
 
@@ -491,7 +491,6 @@ input:checked + .slider:before {
   background: #ffffff;
   box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
   padding-bottom: 50px;
-  margin-bottom: 50px;
 }
 
 .myDeveloperSkills-container {
@@ -550,6 +549,9 @@ input:checked + .slider:before {
 }
 
 @media (min-width: 1024px) {
+  .whatIDo-container {
+    margin-top: 80px;
+  }
   #rightTitleLine {
     display: block;
   }
@@ -579,7 +581,7 @@ input:checked + .slider:before {
   width: 100vw;
   display: flex;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 40px;
   flex-direction: column;
 }
 
@@ -630,7 +632,7 @@ input:checked + .slider:before {
 
 @media (min-width: 1024px) {
   .AboutMe-container {
-    margin-top: 120px;
+    margin-top: 80px;
   }
   .aboutMeItems-container {
     grid-template-columns: 1fr 2fr;
@@ -657,7 +659,7 @@ input:checked + .slider:before {
   width: 100vw;
   display: flex;
   align-items: center;
-  margin-top: 120px;
+  margin-top: 40px;
   flex-direction: column;
 }
 
@@ -694,6 +696,10 @@ input:checked + .slider:before {
 }
 
 @media (min-width: 1024px) {
+  .myPortifolio-container {
+    margin-top: 80px;
+  }
+
   .projects-container {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -712,7 +718,7 @@ input:checked + .slider:before {
 .footer-container {
   width: 100vw;
   height: 70px;
-  margin-top: 120px;
+  margin-top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
