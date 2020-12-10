@@ -20,10 +20,16 @@ const MyPortifolio = () => {
         <div className="titleLine"></div>
       </div>
       <div className="projects-container">
-        <div className="projectBox">
-          <div className="projectImage"></div>
-          <div className="projectDescription-container"></div>
-        </div>
+        <a
+          href="https://netflix-clone-henna.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="projectBox">
+            <div id="netflixCloneImage" className="projectImage"></div>
+            <div className="projectDescription-container"></div>
+          </div>
+        </a>
         <div className="projectBox">
           <div className="projectImage"></div>
           <div className="projectDescription-container"></div>
