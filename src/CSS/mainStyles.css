@@ -1,0 +1,436 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.navBar-container {
+  background-color: var(--main-dark-color);
+  width: 100vw;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  transition: background-color 0.5s;
+}
+
+.transparentNavBar {
+  background: black;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7511379552) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.navBar-items-container {
+  width: 90vw;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+}
+
+.mobile-navLinks-container {
+  width: 95vw;
+}
+
+.mobile-container {
+  background-color: var(--main-dark-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 500px;
+  border-radius: 5%;
+  transition: margin ease 0.5s;
+  margin-top: -500px;
+  z-index: 600;
+  position: fixed;
+}
+
+.navBar-items-container li a,
+.mobile-container li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 30px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.navBar-navLinks-container {
+  display: none;
+}
+
+.blankSpace {
+  display: none;
+}
+
+.navBar-container img {
+  height: 70%;
+  transition: ease all 0.5s;
+  transform: scale(0.98);
+}
+
+.isActive {
+  margin-top: 0;
+  height: 50vh;
+}
+
+nav.stroke {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+}
+
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #aaa;
+  height: 2px;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 0.5s;
+}
+
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+.mobile-navLinks-container {
+  margin-top: 80px;
+}
+
+.navBar-items-container li,
+.mobile-container li {
+  list-style-type: none;
+}
+
+.navBar-items-container a .navBar-items-container a:after .navBar-items-container a:before {
+  transition: all 0.5s;
+}
+
+.navBar-container img:hover {
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1);
+}
+
+.navBar-navLinks-container li a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.navBar-navLinks-container li a:hover {
+  color: white;
+}
+
+.language {
+  color: white;
+  font-size: 12px;
+}
+
+.mobile-blankSpace {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.eng {
+  margin-right: 10px;
+}
+
+.pt {
+  margin-left: 10px;
+}
+
+.switch {
+  position: relative;
+  width: 44px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  width: 44px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 16px;
+  left: 4px;
+  bottom: 2px;
+  background-color: black;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+@media (min-height: 700px) {
+  .navBar-container {
+    height: 70px;
+  }
+}
+@media (min-width: 1024px) {
+  .navBar-items-container {
+    margin: auto;
+    width: 90vw;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  .navBar-navLinks-container {
+    left: 0;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+  }
+
+  .mobile-container {
+    display: none;
+  }
+
+  .blankSpace {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 1280px) {
+  .navBar-items-container {
+    width: 1124px;
+  }
+}
+.mainSection-container {
+  background-image: url("../assets/mainSection/mainBackground.jpg");
+  height: 107vh;
+  min-height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-top: -20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.fade {
+  position: absolute;
+  left: 0;
+  background: linear-gradient(90deg, #14203d 30%, rgba(71, 71, 71, 0));
+  width: 80vw;
+  height: 107vh;
+}
+
+.mainSection-presentationTextContainer {
+  width: 85vw;
+  z-index: 1;
+}
+
+.mainSection-presentationTextContainer h3 {
+  font-family: "Nothing You Could Do", cursive;
+  font-size: 60px;
+  font-weight: lighter;
+  color: #bd8722;
+  line-height: 20px;
+}
+
+.mainSection-presentationTextContainer h1 {
+  font-size: 28px;
+}
+
+.mainSection-presentationTextContainer p {
+  font-size: 12px;
+  margin-left: 2px;
+  font-weight: 500;
+}
+
+.learnMore-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 10px;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  opacity: 0.8;
+}
+
+.learnMore-container p {
+  font-size: 15px;
+  margin: 6px;
+}
+
+.learnMore-container img {
+  width: 30px;
+  height: 25px;
+}
+
+.learnMore-container:hover {
+  opacity: 1;
+}
+
+@media (min-width: 470px) {
+  .mainSection-presentationTextContainer h1 {
+    font-size: 46px;
+  }
+
+  .mainSection-presentationTextContainer p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1024px) {
+  .mainSection-container {
+    min-height: 800px;
+  }
+
+  .mainSection-presentationTextContainer {
+    width: 90vw;
+  }
+
+  .mainSection-presentationTextContainer img {
+    margin-top: -70px;
+    width: 300px;
+    margin-left: -70px;
+  }
+
+  .mainSection-presentationTextContainer h1 {
+    font-size: 86px;
+  }
+
+  .mainSection-presentationTextContainer p {
+    font-size: 36px;
+    margin-left: 2px;
+    font-weight: 500;
+  }
+}
+@media (min-width: 1280px) {
+  .mainSection-container {
+    background-position: center left 200px;
+  }
+
+  .mainSection-presentationTextContainer {
+    width: 1124px;
+  }
+}
+
+/*# sourceMappingURL=mainStyles.css.map */

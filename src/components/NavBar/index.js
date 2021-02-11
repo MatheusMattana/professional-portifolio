@@ -9,7 +9,6 @@ import logoWhite from '../../assets/navBar/logoWhite.png';
 
 const NavBar = () => {
   const [isNavActive, setIsNavActive] = useState(false);
-  const [isScrollDown, setIsScrollDown] = useState(false);
 
   const { languageSelected, setLanguageSelected } = useLanguage();
 
@@ -17,10 +16,6 @@ const NavBar = () => {
   languageSelected === 'English'
     ? (texts = LanguageTexts.English)
     : (texts = LanguageTexts.Portuguese);
-
-  window.onscroll = function (event) {
-    this.scrollY > 100 ? setIsScrollDown(true) : setIsScrollDown(false);
-  };
 
   const changeLanguage = () => {
     if (languageSelected === 'English') {
@@ -34,15 +29,9 @@ const NavBar = () => {
 
   return (
     <>
-      <nav
-        className={`navBar-container ${
-          isScrollDown ? '' : 'transparentNavBar'
-        }`}
-      >
+      <nav className="navBar-container">
         <div className="navBar-items-container">
-          <div className="navBar-logo-container">
-            <img src={logoWhite} alt="web site logo" />
-          </div>
+          <img src={logoWhite} alt="web site logo" />
           <nav className="stroke">
             <ul className="navBar-navLinks-container">
               <li>
@@ -54,32 +43,20 @@ const NavBar = () => {
               <li>
                 <a href="/">{texts.NavBar.MyPortifolio}</a>
               </li>
+              <div className="blankSpace">
+                <span className="language eng">ENG</span>
+                <label className="switch">
+                  <input
+                    type="checkbox"
+                    onClick={() => changeLanguage()}
+                    checked={languageSelected === 'English' ? false : true}
+                  />
+                  <span className="slider"></span>
+                </label>
+                <span className="language pt">PT</span>
+              </div>
             </ul>
           </nav>
-          <div className="blankSpace">
-            <span className="language eng">ENG</span>
-            <label className="switch">
-              <input
-                type="checkbox"
-                onClick={() => changeLanguage()}
-                checked={languageSelected === 'English' ? false : true}
-              />
-              <span className="slider"></span>
-            </label>
-            <span className="language pt">PT</span>
-          </div>
-          <button
-            className={`hamburger hamburger--collapse ${
-              isNavActive ? 'is-active' : ''
-            }`}
-            id="hamburger"
-            type="button"
-            onClick={() => setIsNavActive(!isNavActive)}
-          >
-            <span className="hamburger-box">
-              <span className="hamburger-inner"></span>
-            </span>
-          </button>
         </div>
       </nav>
 

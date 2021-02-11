@@ -52,7 +52,7 @@ a {
 }
 
 /* ---------NavBar Style starts here--------------- */
-.navBar-container {
+/* .navBar-container {
   background-color: var(--main-dark-color);
   width: 100vw;
   height: 70px;
@@ -163,7 +163,7 @@ nav.fill ul li a {
 nav.stroke ul li a:after,
 nav.fill ul li a:after {
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   left: 0;
   right: 0;
   margin: auto;
@@ -171,7 +171,7 @@ nav.fill ul li a:after {
   content: '.';
   color: transparent;
   background: #aaa;
-  height: 1px;
+  height: 2px;
 }
 
 nav ul li a,
@@ -280,7 +280,7 @@ input:checked + .slider:before {
 
 @media (min-height: 700px) {
   .navBar-container {
-    height: 100px;
+    height: 80px;
   }
 }
 
@@ -338,8 +338,8 @@ input:checked + .slider:before {
 
 /* ------MainSection Style start here----------- */
 
-.mainSection-container {
-  background-image: url('./assets/mainBackground.png');
+/* .mainSection-container {
+  background-image: url('./assets/mainSection/mainBackground.jpg');
   height: 107vh;
   min-height: 500px;
   background-position: center;
@@ -442,6 +442,8 @@ input:checked + .slider:before {
     width: 1124px;
   }
 }
+*/
+*/
 
 /* ------MainSection Style ends here--------------- */
 

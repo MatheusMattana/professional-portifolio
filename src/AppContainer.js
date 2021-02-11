@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import LanguageProvider from './context/Language';
 
 import './AppContainer.css';
+import './CSS/mainStyles.css';
 
 function AppContainer() {
   return (

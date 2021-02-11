@@ -4,14 +4,6 @@ import LanguageTexts from '../../LanguageTexts.json';
 
 import { useLanguage } from '../../context/Language';
 
-import goodMorning from '../../assets/mainSection/goodMorning.png';
-import goodAfternoon from '../../assets/mainSection/goodAfternoon.png';
-import goodNight from '../../assets/mainSection/goodNight.png';
-import bomDia from '../../assets/mainSection/bomDia.png';
-import boaTarde from '../../assets/mainSection/boaTarde.png';
-import boaNoite from '../../assets/mainSection/boaNoite.png';
-import downArrow from '../../assets/mainSection/down-arrow.png';
-
 const MainSection = () => {
   const { languageSelected } = useLanguage();
   let texts = {};
@@ -24,39 +16,30 @@ const MainSection = () => {
     let hours = date.getHours();
     let timeOfDay;
 
-    hours < 12 && languageSelected === 'English'
-      ? (timeOfDay = goodMorning)
-      : hours < 12 && languageSelected === 'Portuguese'
-      ? (timeOfDay = bomDia)
+    hours < 12 && hours > 5 && languageSelected === 'English'
+      ? (timeOfDay = 'Good morning!')
+      : hours < 12 && hours > 5 && languageSelected === 'Portuguese'
+      ? (timeOfDay = 'Bom dia!')
       : hours >= 12 && hours < 18 && languageSelected === 'English'
-      ? (timeOfDay = goodAfternoon)
+      ? (timeOfDay = 'Good afternoon!')
       : hours >= 12 && hours < 18 && languageSelected === 'Portuguese'
-      ? (timeOfDay = boaTarde)
+      ? (timeOfDay = 'Boa tarde!')
       : languageSelected === 'English'
-      ? (timeOfDay = goodNight)
+      ? (timeOfDay = 'Good night!')
       : languageSelected === 'Portuguese'
-      ? (timeOfDay = boaNoite)
-      : (timeOfDay = boaNoite);
+      ? (timeOfDay = 'Boa noite!')
+      : (timeOfDay = 'Boa noite!');
     console.log(timeOfDay);
     return timeOfDay;
   }
 
-  let hourImage = getTimeOfDay();
-
   return (
     <div className="mainSection-container">
+      <div className="fade"></div>
       <div className="mainSection-presentationTextContainer">
-        <img src={hourImage} alt="responsive greetings" />
+        <h3>{getTimeOfDay()}</h3>
         <h1>{texts.PresentationText.ImMatheus}</h1>
         <p>{texts.PresentationText.IBuildInterfaces}</p>
-      </div>
-      <div
-        id="whatIDo"
-        onClick={() => window.scrollTo({ top: 800, behavior: 'smooth' })}
-        className="learnMore-container"
-      >
-        <p>{texts.PresentationText.LearnMore}</p>
-        <img src={downArrow} alt="down arrow" />
       </div>
     </div>
   );
