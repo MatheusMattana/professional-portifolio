@@ -30,6 +30,12 @@ ol[role='list'] {
 
 /* Set core root defaults */
 
+html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -38,14 +44,21 @@ html:focus-within {
 
 body {
   min-height: 100vh;
-
   text-rendering: optimizeSpeed;
-
   line-height: 1.5;
+  font-family: $mainFontFamily;
+  margin: 0 0 0 0;
+  padding: 0;
+  background-color: $primaryColor;
+  box-sizing: border-box;
+  transition: scroll ease 1s;
 }
 
 /* A elements that don't have a class get default styles */
-
+a {
+  color: white;
+  text-decoration: none; /* no underline */
+}
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }

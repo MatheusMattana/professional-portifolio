@@ -1,5 +1,5 @@
 .navBar-container {
-  background-color: var(--main-dark-color);
+  background-color: $blackColor;
   width: 100vw;
   height: 70px;
   display: flex;
@@ -33,7 +33,7 @@
 }
 
 .mobile-container {
-  background-color: var(--main-dark-color);
+  background-color: $blackColor;
   display: flex;
   flex-direction: column;
   justify-content: center;

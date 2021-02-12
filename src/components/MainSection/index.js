@@ -40,6 +40,9 @@ const MainSection = () => {
         <h3>{getTimeOfDay()}</h3>
         <h1>{texts.PresentationText.ImMatheus}</h1>
         <p>{texts.PresentationText.IBuildInterfaces}</p>
+        <button className="actionButton">
+          {texts.PresentationText.actionButton}
+        </button>
       </div>
     </div>
   );

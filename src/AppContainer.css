@@ -9,30 +9,9 @@
 */
 
 :root {
-  --main-dark-color: #161618;
   --background-color: #ededed;
   --main-font: 'Inter', sans-serif;
   --main-clear-color: #fff;
-}
-
-html {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: var(--main-font);
-  margin: 0 0 0 0;
-  padding: 0;
-  background-color: var(--background-color);
-  box-sizing: border-box;
-  transition: scroll ease 1s;
-}
-
-a {
-  color: white;
-  text-decoration: none; /* no underline */
 }
 
 :focus {
