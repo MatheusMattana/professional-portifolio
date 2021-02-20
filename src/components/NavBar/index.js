@@ -9,7 +9,7 @@ import logoWhite from '../../assets/navBar/logoWhite.png';
 
 const NavBar = () => {
   const [isNavActive, setIsNavActive] = useState(false);
-
+  const [isScrollDown, setIsScrollDown] = useState(false);
   const { languageSelected, setLanguageSelected } = useLanguage();
 
   let texts = {};
@@ -25,6 +25,10 @@ const NavBar = () => {
       setLanguageSelected('English');
       window.localStorage.setItem('local-language', 'English');
     }
+  };
+
+  window.onscroll = function (event) {
+    this.scrollY > 350 ? setIsScrollDown(true) : setIsScrollDown(false);
   };
 
   return (
@@ -51,7 +55,9 @@ const NavBar = () => {
                     onClick={() => changeLanguage()}
                     checked={languageSelected === 'English' ? false : true}
                   />
-                  <span className="slider"></span>
+                  <span
+                    className={isScrollDown ? 'slider' : 'sliderGold slider'}
+                  ></span>
                 </label>
                 <span className="language pt">PT</span>
               </div>
@@ -59,54 +65,6 @@ const NavBar = () => {
           </nav>
         </div>
       </nav>
-
-      <nav className={`mobile-container ${isNavActive ? 'isActive' : ''}`}>
-        <nav className="stroke">
-          <ul className="mobile-navLinks-container">
-            <li>
-              <a
-                href="#whatIDo"
-                onClick={() =>
-                  isNavActive ? setIsNavActive(!isNavActive) : ''
-                }
-              >
-                {texts.NavBar.WhatIDo}
-              </a>
-            </li>
-            <li>
-              <a
-                href="#aboutMe"
-                onClick={() =>
-                  isNavActive ? setIsNavActive(!isNavActive) : ''
-                }
-              >
-                {texts.NavBar.AboutMe}
-              </a>
-            </li>
-            <li>
-              <a href="/">{texts.NavBar.MyPortifolio}</a>
-            </li>
-          </ul>
-        </nav>
-        <div className="mobile-blankSpace">
-          <span className="language eng">ENG</span>
-          <label className="switch">
-            <input
-              type="checkbox"
-              onClick={() => changeLanguage()}
-              checked={languageSelected === 'English' ? false : true}
-            />
-            <span className="slider"></span>
-          </label>
-          <span className="language pt">PT</span>
-        </div>
-      </nav>
-      {isNavActive && (
-        <div
-          className="backgroundBlur"
-          onClick={() => setIsNavActive(!isNavActive)}
-        ></div>
-      )}
     </>
   );
 };

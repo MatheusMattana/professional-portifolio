@@ -12,11 +12,13 @@
       "actionButton": "Learn more about what I do"
     },
     "WhatIDo": {
-      "Title": "What I do",
-      "FrontEnd": "As a front end developer, that are my skills:",
-      "Designer": "As a web-designer, that are my skills:",
-      "PencilAndPaper": "Pencil and Paper",
-      "References": "Aways looking for new references"
+      "Title": "I’m front-end developer",
+      "SetOfTools": "In the list below are the technologies and tools that I use for the development of my web sites:",
+      "Sass": "CSS (SASS, grid, responsivennes)",
+      "Git": "Git for version control",
+      "Figma": "Figma for prototyping",
+      "Photoshop": "Photoshop for image manipulation",
+      "Illustrator": "Illustrator for creating vector images"
     },
     "AboutMe": {
       "Title": "About me",
@@ -43,11 +45,13 @@
       "actionButton": "Saiba mais sobre o que eu faço"
     },
     "WhatIDo": {
-      "Title": "O que eu faço",
-      "FrontEnd": "Como desenvolvedor front-end, essas são minhas habilidades:",
-      "Designer": "Como web-designer, essas são minhas habilidades:",
-      "PencilAndPaper": "Lápis e Papel",
-      "References": "Sempre buscando referências"
+      "Title": "Eu sou desenvolvedor 'front-end'",
+      "SetOfTools": "Na lista abaixo esta a 'stack' de tecnologias e ferramentas que utilizo para o desenvolvimento dos meus sites:",
+      "Sass": "CSS (SASS, grid, responsividade)",
+      "Git": "Git para controle de versão",
+      "Figma": "Figma para prototipagem",
+      "Photoshop": "Photoshop para manipulação de imagens",
+      "Illustrator": "Illustrator para criação de imagens vetoriais"
     },
     "AboutMe": {
       "Title": "Sobre mim",

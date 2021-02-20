@@ -8,46 +8,19 @@
   position: fixed;
   top: 0;
   z-index: 999;
-  transition: background-color 0.5s;
-}
-
-.transparentNavBar {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.7511379551820728) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
 }
 
 .navBar-items-container {
   width: 90vw;
-  height: 30px;
-  display: flex;
-  justify-content: space-between;
   z-index: 999;
-}
-
-.mobile-navLinks-container {
-  width: 95vw;
-}
-
-.mobile-container {
-  background-color: $blackColor;
+  margin: auto;
+  height: 40px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 100vw;
-  min-height: 500px;
-  border-radius: 5%;
-  transition: margin ease 0.5s;
-  margin-top: -500px;
-  z-index: 600;
-  position: fixed;
+  justify-content: space-between;
 }
-.navBar-items-container li a,
-.mobile-container li a {
+
+.navBar-items-container li a {
   color: #fff;
   text-decoration: none;
   padding: 30px 0;
@@ -55,23 +28,15 @@
   font-weight: 600;
 }
 
-.navBar-navLinks-container {
-  display: none;
-}
-
 .blankSpace {
-  display: none;
+  display: flex;
+  align-items: center;
 }
 
 .navBar-container img {
   height: 70%;
   transition: ease all 0.5s;
   transform: scale(0.98);
-}
-
-.isActive {
-  margin-top: 0;
-  height: 50vh;
 }
 
 nav.stroke {
@@ -113,13 +78,8 @@ nav.stroke ul li a:hover:after {
   width: 100%;
 }
 
-.mobile-navLinks-container {
-  margin-top: 80px;
-}
-
-.navBar-items-container li,
-.mobile-container li {
-  list-style-type: none;
+.navBar-items-container li {
+  display: none;
 }
 
 .navBar-items-container
@@ -151,12 +111,6 @@ nav.stroke ul li a:hover:after {
   font-size: 12px;
 }
 
-.mobile-blankSpace {
-  display: flex;
-  align-items: center;
-  margin-top: 40px;
-}
-
 .eng {
   margin-right: 10px;
 }
@@ -175,6 +129,10 @@ nav.stroke ul li a:hover:after {
   opacity: 0;
   width: 0;
   height: 0;
+}
+
+.sliderGold {
+  background-color: $goldColor !important;
 }
 
 .slider {
@@ -221,15 +179,6 @@ input:checked + .slider:before {
 }
 
 @media (min-width: 1024px) {
-  .navBar-items-container {
-    margin: auto;
-    width: 90vw;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
   #hamburger {
     display: none;
   }
@@ -242,19 +191,13 @@ input:checked + .slider:before {
     justify-content: space-between;
     width: 600px;
   }
-
-  .mobile-container {
-    display: none;
-  }
-
-  .blankSpace {
-    display: flex;
-    align-items: center;
+  .navBar-items-container li {
+    display: block;
   }
 }
 
 @media (min-width: 1280px) {
   .navBar-items-container {
-    width: 1124px;
+    width: 1140px;
   }
 }

@@ -1,17 +1,12 @@
 import React from 'react';
 import LanguageTexts from '../../LanguageTexts.json';
 
-import IconCss from '../../assets/skillsIcons/CSSicon.png';
-import IconHtml from '../../assets/skillsIcons/HTMLicon.png';
-import IconJavascript from '../../assets/skillsIcons/JSicon.png';
-import IconReact from '../../assets/skillsIcons/REACTicon.png';
-import IconGit from '../../assets/skillsIcons/GITicon.png';
+import IconReact from '../../assets/skillsIcons/Reacticon.svg';
+import IconGit from '../../assets/skillsIcons/Giticon.svg';
 
-import IconFigma from '../../assets/skillsIcons/FIGMAicon.png';
-import IconPs from '../../assets/skillsIcons/PSicon.png';
-import IconAi from '../../assets/skillsIcons/AIicon.png';
-import IconPenAndPaper from '../../assets/skillsIcons/PENANDPAPERicon.png';
-import IconReferences from '../../assets/skillsIcons/REFERENCESicon.png';
+import IconFigma from '../../assets/skillsIcons/Figmaicon.svg';
+import IconPs from '../../assets/skillsIcons/Photoshopicon.svg';
+import IconAi from '../../assets/skillsIcons/Illustratoricon.svg';
 
 import { useLanguage } from '../../context/Language';
 
@@ -25,78 +20,63 @@ const WhatIDo = () => {
 
   return (
     <div className="whatIDo-container">
-      <div className="Title-container">
-        <div id="rightTitleLine" className="titleLine"></div>
-        <div className="sectionTitle">
-          <i>{texts.WhatIDo.Title}</i>
-        </div>
-        <div className="titleLine"></div>
-      </div>
-      <div className="mySkills-container">
-        <div className="myDeveloperSkills-container">
-          <p>
-            <i>{texts.WhatIDo.FrontEnd}</i>
-          </p>
-          <div className="skill-container">
-            <img src={IconHtml} className="skillIcon" alt="html icon" />
+      <div className="sectionTitle">{texts.WhatIDo.Title}</div>
+      <p className="description notCentralizedText">
+        {texts.WhatIDo.SetOfTools}
+      </p>
+      <div className="mySkills-container notCentralizedText">
+        <ul className="myDeveloperSkills-container">
+          <li className="skill-container">
+            <div className="iconContainer">
+              <p>&lt;/&gt;</p>
+            </div>
             <p className="skillDescription">HTML</p>
-          </div>
-          <div className="skill-container">
-            <img src={IconCss} className="skillIcon" alt="Css icon" />
-            <p className="skillDescription">CSS</p>
-          </div>
-          <div className="skill-container">
-            <img
-              src={IconJavascript}
-              className="skillIcon"
-              alt="javascript icon"
-            />
+          </li>
+          <li className="skill-container">
+            <div className="iconContainer">
+              <p>&#123;&#59;&#125;</p>
+            </div>
+            <p className="skillDescription">{texts.WhatIDo.Sass}</p>
+          </li>
+          <li className="skill-container">
+            <div className="iconContainer">
+              <p>JS</p>
+            </div>
             <p className="skillDescription">Javascript</p>
-          </div>
-          <div className="skill-container">
-            <img src={IconReact} className="skillIcon" alt="react icon" />
+          </li>
+          <li className="skill-container">
+            <div className="iconContainer">
+              <img src={IconReact} className="skillIcon" alt="react icon" />
+            </div>
             <p className="skillDescription">React</p>
-          </div>
-          <div className="skill-container">
-            <img src={IconGit} className="skillIcon" alt="git icon" />
-            <p className="skillDescription">Git</p>
-          </div>
-        </div>
-        <div className="myDeveloperSkills-container">
-          <p>
-            <i>{texts.WhatIDo.Designer}</i>
-          </p>
-          <div className="skill-container">
-            <img src={IconFigma} className="skillIcon" alt="figma icon" />
-            <p className="skillDescription">Figma</p>
-          </div>
-          <div className="skill-container">
-            <img src={IconPs} className="skillIcon" alt="photoshop icon" />
-            <p className="skillDescription">Photoshop</p>
-          </div>
-          <div className="skill-container">
-            <img src={IconAi} className="skillIcon" alt="illustrator icon" />
-            <p className="skillDescription">Illustrator</p>
-          </div>
-          <div className="skill-container">
-            <img
-              src={IconPenAndPaper}
-              className="skillIcon"
-              alt="pencil and paper icon"
-            />
-            <p className="skillDescription">{texts.WhatIDo.PencilAndPaper}</p>
-          </div>
-          <div className="skill-container">
-            <img
-              src={IconReferences}
-              className="skillIcon"
-              alt="references icon"
-            />
-            <p id="aboutMe" className="skillDescription">
-              {texts.WhatIDo.References}
-            </p>
-          </div>
-        </div>
+          </li>
+        </ul>
+        <ul className="myDeveloperSkills-container">
+          <li className="skill-container">
+            <div className="iconContainer">
+              <img src={IconGit} className="skillIcon" alt="git icon" />
+            </div>
+            <p className="skillDescription">{texts.WhatIDo.Git}</p>
+          </li>
+          <li className="skill-container">
+            <div className="iconContainer">
+              <img src={IconFigma} className="skillIcon" alt="figma icon" />
+            </div>
+            <p className="skillDescription">{texts.WhatIDo.Figma}</p>
+          </li>
+          <li className="skill-container">
+            <div className="iconContainer">
+              <img src={IconPs} className="skillIcon" alt="photoshop icon" />
+            </div>
+            <p className="skillDescription">{texts.WhatIDo.Photoshop}</p>
+          </li>
+          <li className="skill-container">
+            <div className="iconContainer">
+              <img src={IconAi} className="skillIcon" alt="illustrator icon" />
+            </div>
+            <p className="skillDescription">{texts.WhatIDo.Illustrator}</p>
+          </li>
+        </ul>
       </div>
     </div>
   );

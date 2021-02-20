@@ -1,0 +1,97 @@
+.whatIDo-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding: 70px 0;
+  flex-direction: column;
+}
+
+.description {
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.mySkills-container {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-template-columns: 100%;
+}
+
+.myDeveloperSkills-container {
+  display: grid;
+  grid-template-columns: minmax(100px, 1124px);
+  grid-template-rows: repeat(4, 50px);
+  grid-row-gap: 10px;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.skillDescription {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.skill-container {
+  display: flex;
+  color: white;
+  align-items: center;
+  background-color: $darkBlueColor;
+  border-radius: 7px;
+}
+
+.iconContainer img {
+  height: 30px;
+  margin: 0 auto;
+}
+
+.skill-container p {
+  margin: 0 0 0 10px;
+}
+
+.iconContainer {
+  text-align: center;
+  font-size: 26px;
+  width: 60px;
+  color: #abb2c3;
+  font-weight: 700;
+}
+
+.myDesignerSkills-container {
+  display: grid;
+  grid-template-columns: minmax(100px, 1124px);
+  grid-row-gap: 10px;
+  padding: 10px 20px;
+}
+
+@media (min-width: 470px) {
+  .skillDescription {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 600px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+  .whatIDo-container {
+    padding: 100px 0;
+  }
+  .sectionTitle {
+    font-size: 40px;
+    margin: 0 10px;
+  }
+  .description {
+    font-size: 20px;
+  }
+  .mySkills-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1280px) {
+}

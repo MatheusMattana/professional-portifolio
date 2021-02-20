@@ -18,17 +18,7 @@
   outline: none;
 }
 
-.sectionTitle {
-  color: var(--main-dark-color);
-  font-size: 44px;
-  font-weight: 800;
-}
 
-@media (min-width: 1024px) {
-  .sectionTitle {
-    font-size: 64px;
-  }
-}
 
 /* ---------NavBar Style starts here--------------- */
 /* .navBar-container {
@@ -430,127 +420,6 @@ input:checked + .slider:before {
 
 /* ------ WhatIDo Style start here---------------- */
 
-.whatIDo-container {
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  margin-top: 40px;
-  flex-direction: column;
-}
-
-.Title-container {
-  width: 90vw;
-  max-width: 1124px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  align-items: center;
-}
-
-.sectionTitle {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 28px;
-}
-
-.titleLine {
-  height: 10px;
-  background: #fff;
-  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#rightTitleLine {
-  display: none;
-}
-
-.mySkills-container {
-  margin-top: 20px;
-  width: 90vw;
-  max-width: 1124px;
-  background-color: #fff;
-  display: grid;
-  grid-template-columns: 100%;
-  background: #ffffff;
-  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
-  padding-bottom: 50px;
-}
-
-.myDeveloperSkills-container {
-  display: grid;
-  grid-template-columns: minmax(100px, 1124px);
-  grid-template-rows: 70px repeat(5, 50px);
-  grid-row-gap: 10px;
-  padding: 10px 20px;
-}
-
-.myDeveloperSkills-container p {
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.skill-container {
-  display: flex;
-  color: white;
-  align-items: center;
-  background-color: var(--main-dark-color);
-  background: #2f2f2f;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.skill-container img {
-  height: 100%;
-}
-
-.skill-container p {
-  margin: 0 10px;
-}
-
-.myDesignerSkills-container {
-  display: grid;
-  grid-template-columns: minmax(100px, 1124px);
-  grid-row-gap: 10px;
-  padding: 10px 20px;
-}
-
-@media (min-width: 470px) {
-  .Title-container {
-    grid-template-columns: 1fr 1fr;
-  }
-  .myDeveloperSkills-container p {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 600px) {
-  .Title-container {
-    grid-template-columns: 1fr 2fr;
-  }
-}
-
-@media (min-width: 768px) {
-}
-
-@media (min-width: 1024px) {
-  .whatIDo-container {
-    margin-top: 80px;
-  }
-  #rightTitleLine {
-    display: block;
-  }
-  .Title-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .sectionTitle {
-    justify-content: center;
-    font-size: 40px;
-    margin: 0 10px;
-  }
-  .mySkills-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 1280px) {
-}
 
 /* ------ WhatIDo Style ends here---------------- */
 

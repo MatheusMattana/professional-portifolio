@@ -1,6 +1,35 @@
 $mainFontFamily: 'Inter', sans-serif;
 
 $primaryColor: #1f3260;
+$darkBlueColor: #14203d;
 $blackColor: #090909;
 $whiteColor: #fff;
 $goldColor: #bd8722;
+
+.sectionTitle {
+  display:flex;
+  align-items: center;
+  font-size: 5vw;
+  font-weight: 700;
+  width: 90vw;
+  max-width: 1124px;
+}
+
+.sectionTitle::before{
+    content:'';
+    width: 5px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: $goldColor;
+}
+
+.notCentralizedText{
+  width: 90vw;
+  max-width: 1124px;
+}
+
+@media (min-width: 1024px) {
+  .sectionTitle {
+    font-size: 64px;
+  }
+}

@@ -1,3 +1,30 @@
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  font-size: 5vw;
+  font-weight: 700;
+  width: 90vw;
+  max-width: 1124px;
+}
+
+.sectionTitle::before {
+  content: "";
+  width: 5px;
+  height: 40px;
+  margin-right: 10px;
+  background-color: #bd8722;
+}
+
+.notCentralizedText {
+  width: 90vw;
+  max-width: 1124px;
+}
+
+@media (min-width: 1024px) {
+  .sectionTitle {
+    font-size: 64px;
+  }
+}
 /* Box sizing rules */
 *,
 *::before,
@@ -23,6 +50,7 @@ dd {
 ul[role=list],
 ol[role=list] {
   list-style: none;
+  margin: 0;
 }
 
 /* Set core root defaults */
@@ -38,7 +66,8 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  min-width: 300px;
+  min-height: 500px;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: "Inter", sans-serif;
@@ -47,6 +76,7 @@ body {
   background-color: #1f3260;
   box-sizing: border-box;
   transition: scroll ease 1s;
+  color: #fff;
 }
 
 /* A elements that don't have a class get default styles */
@@ -100,43 +130,19 @@ select {
   position: fixed;
   top: 0;
   z-index: 999;
-  transition: background-color 0.5s;
-}
-
-.transparentNavBar {
-  background: black;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7511379552) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .navBar-items-container {
   width: 90vw;
-  height: 30px;
-  display: flex;
-  justify-content: space-between;
   z-index: 999;
-}
-
-.mobile-navLinks-container {
-  width: 95vw;
-}
-
-.mobile-container {
-  background-color: #090909;
+  margin: auto;
+  height: 40px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 100vw;
-  min-height: 500px;
-  border-radius: 5%;
-  transition: margin ease 0.5s;
-  margin-top: -500px;
-  z-index: 600;
-  position: fixed;
+  justify-content: space-between;
 }
 
-.navBar-items-container li a,
-.mobile-container li a {
+.navBar-items-container li a {
   color: #fff;
   text-decoration: none;
   padding: 30px 0;
@@ -144,23 +150,15 @@ select {
   font-weight: 600;
 }
 
-.navBar-navLinks-container {
-  display: none;
-}
-
 .blankSpace {
-  display: none;
+  display: flex;
+  align-items: center;
 }
 
 .navBar-container img {
   height: 70%;
   transition: ease all 0.5s;
   transform: scale(0.98);
-}
-
-.isActive {
-  margin-top: 0;
-  height: 50vh;
 }
 
 nav.stroke {
@@ -203,13 +201,8 @@ nav.stroke ul li a:hover:after {
   width: 100%;
 }
 
-.mobile-navLinks-container {
-  margin-top: 80px;
-}
-
-.navBar-items-container li,
-.mobile-container li {
-  list-style-type: none;
+.navBar-items-container li {
+  display: none;
 }
 
 .navBar-items-container a .navBar-items-container a:after .navBar-items-container a:before {
@@ -236,12 +229,6 @@ nav.stroke ul li a:hover:after {
   font-size: 12px;
 }
 
-.mobile-blankSpace {
-  display: flex;
-  align-items: center;
-  margin-top: 40px;
-}
-
 .eng {
   margin-right: 10px;
 }
@@ -260,6 +247,10 @@ nav.stroke ul li a:hover:after {
   opacity: 0;
   width: 0;
   height: 0;
+}
+
+.sliderGold {
+  background-color: #bd8722 !important;
 }
 
 .slider {
@@ -299,15 +290,6 @@ input:checked + .slider:before {
   }
 }
 @media (min-width: 1024px) {
-  .navBar-items-container {
-    margin: auto;
-    width: 90vw;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
   #hamburger {
     display: none;
   }
@@ -321,18 +303,13 @@ input:checked + .slider:before {
     width: 600px;
   }
 
-  .mobile-container {
-    display: none;
-  }
-
-  .blankSpace {
-    display: flex;
-    align-items: center;
+  .navBar-items-container li {
+    display: block;
   }
 }
 @media (min-width: 1280px) {
   .navBar-items-container {
-    width: 1124px;
+    width: 1140px;
   }
 }
 .mainSection-container {
@@ -360,7 +337,7 @@ input:checked + .slider:before {
 }
 
 .mainSection-presentationTextContainer {
-  width: 85vw;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -382,7 +359,7 @@ input:checked + .slider:before {
 .mainSection-presentationTextContainer p {
   font-size: 3.5vw;
   margin-left: 2px;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 10px;
 }
 
@@ -415,6 +392,7 @@ input:checked + .slider:before {
     background: linear-gradient(90deg, #14203d 30%, rgba(71, 71, 71, 0));
     width: 80vw;
     height: 107vh;
+    min-height: 500px;
   }
 
   .mainSection-presentationTextContainer {
@@ -434,13 +412,12 @@ input:checked + .slider:before {
   .mainSection-presentationTextContainer p {
     font-size: 36px;
     margin-left: 2px;
-    font-weight: 500;
     line-height: 0;
   }
 
   .actionButton {
     font-size: 18px;
-    margin-top: 70px;
+    margin-top: 110px;
     position: unset;
     background-color: transparent;
   }
@@ -452,6 +429,96 @@ input:checked + .slider:before {
 
   .mainSection-presentationTextContainer {
     width: 1124px;
+  }
+}
+.whatIDo-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding: 70px 0;
+  flex-direction: column;
+}
+
+.description {
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.mySkills-container {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-template-columns: 100%;
+}
+
+.myDeveloperSkills-container {
+  display: grid;
+  grid-template-columns: minmax(100px, 1124px);
+  grid-template-rows: repeat(4, 50px);
+  grid-row-gap: 10px;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.skillDescription {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.skill-container {
+  display: flex;
+  color: white;
+  align-items: center;
+  background-color: #14203d;
+  border-radius: 7px;
+}
+
+.iconContainer img {
+  height: 30px;
+  margin: 0 auto;
+}
+
+.skill-container p {
+  margin: 0 0 0 10px;
+}
+
+.iconContainer {
+  text-align: center;
+  font-size: 26px;
+  width: 60px;
+  color: #abb2c3;
+  font-weight: 700;
+}
+
+.myDesignerSkills-container {
+  display: grid;
+  grid-template-columns: minmax(100px, 1124px);
+  grid-row-gap: 10px;
+  padding: 10px 20px;
+}
+
+@media (min-width: 470px) {
+  .skillDescription {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1024px) {
+  .whatIDo-container {
+    padding: 100px 0;
+  }
+
+  .sectionTitle {
+    font-size: 40px;
+    margin: 0 10px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .mySkills-container {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
