@@ -50,9 +50,8 @@ const NavBar = () => {
                 <label className="switch">
                   <input
                     type="checkbox"
-                    onClick={() => changeLanguage()}
-                    checked={languageSelected === 'English' ? false : true}
-                    onChange={() => {}}
+                    checked={languageSelected === 'Portuguese' ? true : false}
+                    onChange={() => changeLanguage()}
                   />
                   <span
                     className={isScrollDown ? 'slider' : 'sliderGold slider'}
