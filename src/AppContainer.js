@@ -19,8 +19,8 @@ function AppContainer() {
         <NavBar />
         <MainSection />
         <WhatIDo />
-        <AboutMe />
         <MyPortifolio />
+         <AboutMe />
         <Footer />
       </div>
     </LanguageProvider>

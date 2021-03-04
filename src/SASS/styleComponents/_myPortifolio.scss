@@ -1,0 +1,66 @@
+.myPortifolio-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $darkBlueColor;
+  padding: 70px 0;
+}
+
+.projects-container {
+  width: 90vw;
+  max-width: 1124px;
+  display: grid;
+  grid-gap: 50px;
+  margin-top: 30px;
+}
+
+.projectBox {
+  width: 100%;
+  height: 470px;
+  padding: 50px 30px;
+  background-color: $primaryColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+
+  > img {
+    width: 80%;
+    max-width: 300px;
+    height: 100px;
+  }
+}
+
+.projectBox button {
+  margin: 5px;
+  width: 60px;
+  height: 60px;
+  border: solid 2px $goldColor;
+  background-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background ease-out 0.2s;
+
+  img {
+    width: 25px;
+    margin: 0 auto;
+  }
+
+  &:hover {
+    background: $goldColor;
+  }
+}
+
+.projectsButtons-container {
+  height: 60px;
+}
+
+@media (min-width: 1024px) {
+  .projects-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}

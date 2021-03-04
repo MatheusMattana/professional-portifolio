@@ -7,7 +7,7 @@ import GithubIcon from '../../assets/footer/GithubIcon.png';
 
 const Footer = () => {
   return (
-    <div class="footer-container">
+    <div className="footer-container">
       <div className="links-container">
         <div className="link-container">
           <a href="mailto:matheusmattana@hotmail.com">

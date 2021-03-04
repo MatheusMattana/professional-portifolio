@@ -46,14 +46,10 @@
   margin: 0 auto;
 }
 
-.skill-container p {
-  margin: 0 0 0 10px;
-}
-
 .iconContainer {
   text-align: center;
-  font-size: 26px;
-  width: 60px;
+  font-size: 22px;
+  width: 70px;
   color: #abb2c3;
   font-weight: 700;
 }
@@ -71,12 +67,6 @@
   }
 }
 
-@media (min-width: 600px) {
-}
-
-@media (min-width: 768px) {
-}
-
 @media (min-width: 1024px) {
   .whatIDo-container {
     padding: 100px 0;
@@ -91,7 +81,4 @@
   .mySkills-container {
     grid-template-columns: 1fr 1fr;
   }
-}
-
-@media (min-width: 1280px) {
 }

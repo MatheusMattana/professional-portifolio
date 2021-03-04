@@ -1,7 +1,7 @@
 .sectionTitle {
   display: flex;
   align-items: center;
-  font-size: 5vw;
+  font-size: 5.3vw;
   font-weight: 700;
   width: 90vw;
   max-width: 1124px;
@@ -22,7 +22,7 @@
 
 @media (min-width: 1024px) {
   .sectionTitle {
-    font-size: 64px;
+    font-size: 40px;
   }
 }
 /* Box sizing rules */
@@ -55,6 +55,7 @@ ol[role=list] {
 
 /* Set core root defaults */
 html {
+  scroll-behavior: smooth;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -103,6 +104,10 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+:focus {
+  outline: none;
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
@@ -334,6 +339,7 @@ input:checked + .slider:before {
   right: 0;
   background: linear-gradient(180deg, rgba(41, 41, 41, 0), rgba(31, 50, 96, 0.9) 30%, rgba(31, 50, 96, 0.9) 70%, rgba(41, 41, 41, 0) 100%);
   height: 40vh;
+  min-height: 300px;
 }
 
 .mainSection-presentationTextContainer {
@@ -364,6 +370,9 @@ input:checked + .slider:before {
 }
 
 .actionButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   bottom: 20px;
   width: 85vw;
@@ -381,6 +390,11 @@ input:checked + .slider:before {
   background-color: #bd8722;
 }
 
+#anchorToWhatIdo {
+  position: absolute;
+  bottom: 0;
+}
+
 @media (min-width: 1024px) {
   .mainSection-container {
     min-height: 800px;
@@ -392,7 +406,7 @@ input:checked + .slider:before {
     background: linear-gradient(90deg, #14203d 30%, rgba(71, 71, 71, 0));
     width: 80vw;
     height: 107vh;
-    min-height: 500px;
+    min-height: 800px;
   }
 
   .mainSection-presentationTextContainer {
@@ -479,14 +493,10 @@ input:checked + .slider:before {
   margin: 0 auto;
 }
 
-.skill-container p {
-  margin: 0 0 0 10px;
-}
-
 .iconContainer {
   text-align: center;
-  font-size: 26px;
-  width: 60px;
+  font-size: 22px;
+  width: 70px;
   color: #abb2c3;
   font-weight: 700;
 }
@@ -520,6 +530,184 @@ input:checked + .slider:before {
   .mySkills-container {
     grid-template-columns: 1fr 1fr;
   }
+}
+.myPortifolio-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #14203d;
+  padding: 70px 0;
+}
+
+.projects-container {
+  width: 90vw;
+  max-width: 1124px;
+  display: grid;
+  grid-gap: 50px;
+  margin-top: 30px;
+}
+
+.projectBox {
+  width: 100%;
+  height: 470px;
+  padding: 50px 30px;
+  background-color: #1f3260;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+}
+.projectBox > img {
+  width: 80%;
+  max-width: 300px;
+  height: 100px;
+}
+
+.projectBox button {
+  margin: 5px;
+  width: 60px;
+  height: 60px;
+  border: solid 2px #bd8722;
+  background-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background ease-out 0.2s;
+}
+.projectBox button img {
+  width: 25px;
+  margin: 0 auto;
+}
+.projectBox button:hover {
+  background: #bd8722;
+}
+
+.projectsButtons-container {
+  height: 60px;
+}
+
+@media (min-width: 1024px) {
+  .projects-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+.AboutMe-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding: 70px 0 0 0;
+  flex-direction: column;
+}
+
+.sectionTitleAboutMe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5vw;
+  font-weight: 700;
+  width: 90vw;
+  max-width: 1124px;
+}
+
+.aboutMeItems-container {
+  width: 90vw;
+  max-width: 1124px;
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.aboutMe-photoProfile {
+  background-image: url("../assets/aboutMe/AboutMePhoto.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 35vw;
+  width: 35vw;
+  margin: 0 0 30px 0;
+  border-radius: 50%;
+}
+
+.aboutMe-photo {
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+  background-image: url("../assets/aboutMe/AboutMePhoto.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 25px;
+}
+
+.aboutMe-presentationText {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 6px;
+  line-height: 25px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.aboutMe-presentationText p {
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .aboutMe-photoProfile {
+    display: none;
+  }
+
+  .sectionTitleAboutMe {
+    font-size: 40px;
+    justify-content: flex-start;
+  }
+  .sectionTitleAboutMe::before {
+    content: "";
+    width: 5px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: #bd8722;
+  }
+
+  .aboutMeItems-container {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .aboutMe-presentationText {
+    padding: 10px 50px 10px 0;
+    grid-gap: 10px;
+    line-height: 35px;
+    font-size: 20px;
+  }
+}
+.footer-container {
+  width: 100vw;
+  height: 70px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #090909;
+}
+
+.links-container {
+  width: 95vw;
+  max-width: 600px;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.link-container img {
+  height: 30px;
+  scale: 0.9;
+}
+
+.links-container img:hover {
+  scale: 1;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=mainStyles.css.map */

@@ -29,7 +29,10 @@
       "MyDescription4": "I am available to move anywhere in the world or work from home instead."
     },
     "MyPortifolio": {
-      "Title": "My portifolio"
+      "Title": "My portifolio",
+      "Netflix": "This project seeks to imitate some basic aspects of the Netflix front-end, using a movie search API.",
+      "React": "Made with React",
+      "Soon": "Coming soon!"
     }
   },
   "Portuguese": {
@@ -56,13 +59,16 @@
     "AboutMe": {
       "Title": "Sobre mim",
       "MyDescription": "Sou desenvolvedor web. Vivo na linda cidade de Gramado no Rio Grande do Sul.",
-      "MyDescription1": "Me formei em análise e desenvolvimento de sistemas pela FADERGS(Faculdade de Desenvolvimento do Rio Grande do Sul)",
-      "MyDescription2": "Desde que comecei na área de desenvolvimento de sistemas, eu sempre fui apaixonado pela beleza de um software, e por isso, me tornei um desenvolvedor 'front-end'. A beleza de um sistema impacta diretamente como usuário percebe a consistência do software que gera interese, curiosidade e satisfação em quem vai usa-lo.",
+      "MyDescription1": "Me formei em análise e desenvolvimento de sistemas pela FADERGS (Faculdade de Desenvolvimento do Rio Grande do Sul)",
+      "MyDescription2": "Desde que comecei na área de desenvolvimento de sistemas, sempre fui apaixonado pela beleza de um software, e por isso, me tornei um desenvolvedor 'front-end'. A beleza de um sistema impacta diretamente como usuário percebe a consistência do software que gera interese, curiosidade e satisfação em quem vai usa-lo.",
       "MyDescription3": "No trabalho, vejo os problemas como desafios, não ha nada que eu não possa fazer (ou pelo menos tentar). Sempre busco uma boa comunicação e um feedback constante, para alinhar minhas ideias com os meus clientes ou colegas de trabalho. (e falo inglês também!).",
-      "MyDescription4": "Estou disponível para me mudar para qualquer lugar no mundo ou trabalhar remotamente também."
+      "MyDescription4": "Estou disponível para me mudar para qualquer lugar no mundo ou trabalhar remotamente."
     },
     "MyPortifolio": {
-      "Title": "Meu portifólio"
+      "Title": "Meu portifólio",
+      "Netflix": "Esse projeto busca imitar alguns aspectos básicos do front-end do Netflix, utilizando de uma API de busca de filmes",
+      "React": "Feito com React",
+      "Soon": "Em breve!"
     }
   }
 }

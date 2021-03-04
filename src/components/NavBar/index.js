@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../../AppContainer.css';
-import '../../hamburgers.css';
 import LanguageTexts from '../../LanguageTexts.json';
 
 import { useLanguage } from '../../context/Language';
@@ -8,7 +7,6 @@ import { useLanguage } from '../../context/Language';
 import logoWhite from '../../assets/navBar/logoWhite.png';
 
 const NavBar = () => {
-  const [isNavActive, setIsNavActive] = useState(false);
   const [isScrollDown, setIsScrollDown] = useState(false);
   const { languageSelected, setLanguageSelected } = useLanguage();
 
@@ -39,13 +37,13 @@ const NavBar = () => {
           <nav className="stroke">
             <ul className="navBar-navLinks-container">
               <li>
-                <a href="#whatIDo">{texts.NavBar.WhatIDo}</a>
+                <a href="#anchorToWhatIdo">{texts.NavBar.WhatIDo}</a>
               </li>
               <li>
-                <a href="/">{texts.NavBar.AboutMe}</a>
+                <a href="#anchorToMyPortifolio">{texts.NavBar.MyPortifolio}</a>
               </li>
               <li>
-                <a href="/">{texts.NavBar.MyPortifolio}</a>
+                <a href="#anchorToMyAboutMe">{texts.NavBar.AboutMe}</a>
               </li>
               <div className="blankSpace">
                 <span className="language eng">ENG</span>
@@ -54,6 +52,7 @@ const NavBar = () => {
                     type="checkbox"
                     onClick={() => changeLanguage()}
                     checked={languageSelected === 'English' ? false : true}
+                    onChange={() => {}}
                   />
                   <span
                     className={isScrollDown ? 'slider' : 'sliderGold slider'}

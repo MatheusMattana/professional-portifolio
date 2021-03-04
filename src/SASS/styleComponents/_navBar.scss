@@ -21,7 +21,7 @@
 }
 
 .navBar-items-container li a {
-  color: #fff;
+  color: $whiteColor;
   text-decoration: none;
   padding: 30px 0;
   font-size: 14px;
@@ -170,12 +170,6 @@ input:checked + .slider:before {
   .navBar-container {
     height: 70px;
   }
-}
-
-@media (min-width: 470px) {
-}
-
-@media (min-width: 768px) {
 }
 
 @media (min-width: 1024px) {

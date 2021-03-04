@@ -13,15 +13,12 @@ const AboutMe = () => {
 
   return (
     <div className="AboutMe-container">
+      <div className="aboutMe-photoProfile"></div>
       <div className="Title-container">
-        <div id="rightTitleLine" className="titleLine"></div>
-        <div className="sectionTitle">
-          <i>{texts.AboutMe.Title}</i>
-        </div>
+        <div className="sectionTitleAboutMe">{texts.AboutMe.Title}</div>
         <div className="titleLine"></div>
       </div>
       <div className="aboutMeItems-container">
-        <div className="aboutMe-photo"></div>
         <div className="aboutMe-presentationText">
           <p>{texts.AboutMe.MyDescription}</p>
           <br />
@@ -33,6 +30,7 @@ const AboutMe = () => {
           <br />
           <p>{texts.AboutMe.MyDescription4}</p>
         </div>
+        <div className="aboutMe-photo"></div>
       </div>
     </div>
   );

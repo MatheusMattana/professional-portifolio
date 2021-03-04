@@ -78,6 +78,7 @@ const WhatIDo = () => {
           </li>
         </ul>
       </div>
+      <div id="anchorToMyPortifolio"></div>
     </div>
   );
 };
