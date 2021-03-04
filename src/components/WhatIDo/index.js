@@ -14,9 +14,9 @@ const WhatIDo = () => {
   const { languageSelected } = useLanguage();
 
   let texts = {};
-  languageSelected === 'English'
-    ? (texts = LanguageTexts.English)
-    : (texts = LanguageTexts.Portuguese);
+  languageSelected === 'Portuguese'
+    ? (texts = LanguageTexts.Portuguese)
+    : (texts = LanguageTexts.English);
 
   return (
     <div className="whatIDo-container">

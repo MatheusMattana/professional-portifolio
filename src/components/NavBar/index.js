@@ -11,9 +11,9 @@ const NavBar = () => {
   const { languageSelected, setLanguageSelected } = useLanguage();
 
   let texts = {};
-  languageSelected === 'English'
-    ? (texts = LanguageTexts.English)
-    : (texts = LanguageTexts.Portuguese);
+  languageSelected === 'Portuguese'
+    ? (texts = LanguageTexts.Portuguese)
+    : (texts = LanguageTexts.English);
 
   const changeLanguage = () => {
     if (languageSelected === 'English') {

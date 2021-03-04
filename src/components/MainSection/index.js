@@ -7,28 +7,28 @@ import { useLanguage } from '../../context/Language';
 const MainSection = () => {
   const { languageSelected } = useLanguage();
   let texts = {};
-  languageSelected === 'English'
-    ? (texts = LanguageTexts.English)
-    : (texts = LanguageTexts.Portuguese);
+  languageSelected === 'Portuguese'
+    ? (texts = LanguageTexts.Portuguese)
+    : (texts = LanguageTexts.English);
 
   function getTimeOfDay() {
     let date = new Date();
     let hours = date.getHours();
     let timeOfDay;
 
-    hours < 12 && hours > 5 && languageSelected === 'English'
-      ? (timeOfDay = 'Good morning!')
-      : hours < 12 && hours > 5 && languageSelected === 'Portuguese'
+    hours < 12 && hours > 5 && languageSelected === 'Portuguese'
       ? (timeOfDay = 'Bom dia!')
-      : hours >= 12 && hours < 18 && languageSelected === 'English'
-      ? (timeOfDay = 'Good afternoon!')
+      : hours < 12 && hours > 5 && languageSelected === 'English'
+      ? (timeOfDay = 'Good morning!')
       : hours >= 12 && hours < 18 && languageSelected === 'Portuguese'
       ? (timeOfDay = 'Boa tarde!')
-      : languageSelected === 'English'
-      ? (timeOfDay = 'Good night!')
+      : hours >= 12 && hours < 18 && languageSelected === 'English'
+      ? (timeOfDay = 'Good afternoon!')
       : languageSelected === 'Portuguese'
       ? (timeOfDay = 'Boa noite!')
-      : (timeOfDay = 'Boa noite!');
+      : languageSelected === 'English'
+      ? (timeOfDay = 'Good night!')
+      : (timeOfDay = 'Good night!');
     console.log(timeOfDay);
     return timeOfDay;
   }
