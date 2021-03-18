@@ -35,6 +35,7 @@ const MainSection = () => {
 
   return (
     <div className="mainSection-container">
+      <div id="anchorToMainSection"></div>
       <div className="fade"></div>
       <div className="mainSection-presentationTextContainer">
         <h3>{getTimeOfDay()}</h3>

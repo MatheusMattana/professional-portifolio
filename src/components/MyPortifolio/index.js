@@ -26,6 +26,32 @@ const MyPortifolio = () => {
       </div>
       <div className="projects-container">
         <div className="projectBox">
+          <img src={HealthyDevLogo} alt="Helthy Dev Logo" />
+          <div className="projectDescription-container">
+            {texts.MyPortifolio.HelthyDev}
+          </div>
+          <div className="projectsButtons-container">
+            <a
+              href="https://activedev.vercel.app"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <button type="button" title="Go to site">
+                <img src={GoToIcon} alt="go to external site icon" />
+              </button>
+            </a>
+            <a
+              href="https://github.com/MatheusMattana/HealthyDev"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <button type="button" title="Go to site">
+                <img src={GitHubIcon} alt="go to external site icon" />
+              </button>
+            </a>
+          </div>
+        </div>
+        <div className="projectBox">
           <img src={NetflixCloneLogo} alt="Netflix Clone Logo" />
           <div className="projectDescription-container">
             {texts.MyPortifolio.Netflix}
@@ -40,23 +66,15 @@ const MyPortifolio = () => {
                 <img src={GoToIcon} alt="go to external site icon" />
               </button>
             </a>
-            <button type="button" title="See on Github">
-              <img src={GitHubIcon} alt="go to external site icon" />
-            </button>
-          </div>
-        </div>
-        <div className="projectBox">
-          <img src={HealthyDevLogo} alt="Helthy Dev Logo" />
-          <div className="projectDescription-container">
-            {texts.MyPortifolio.Netflix}
-          </div>
-          <div className="projectsButtons-container">
-            <button type="button">
-              <img src={GoToIcon} alt="go to external site icon" />
-            </button>
-            <button type="button">
-              <img src={GitHubIcon} alt="go to external site icon" />
-            </button>
+            <a
+              href="https://github.com/MatheusMattana/netflix-clone"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <button type="button" title="Go to site">
+                <img src={GitHubIcon} alt="go to external site icon" />
+              </button>
+            </a>
           </div>
         </div>
         <div className="projectBox">
@@ -67,7 +85,7 @@ const MyPortifolio = () => {
           <div className="projectsButtons-container"></div>
         </div>
       </div>
-      <div id="anchorToMyAboutMe"></div>
+      <div id="anchorToAboutMe"></div>
     </div>
   );
 };

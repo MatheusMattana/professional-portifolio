@@ -33,7 +33,9 @@ const NavBar = () => {
     <>
       <nav className="navBar-container">
         <div className="navBar-items-container">
-          <img src={logoWhite} alt="web site logo" />
+          <a href="#anchorToMainSection">
+            <img src={logoWhite} alt="web site logo" />
+          </a>
           <nav className="stroke">
             <ul className="navBar-navLinks-container">
               <li>
@@ -43,7 +45,7 @@ const NavBar = () => {
                 <a href="#anchorToMyPortifolio">{texts.NavBar.MyPortifolio}</a>
               </li>
               <li>
-                <a href="#anchorToMyAboutMe">{texts.NavBar.AboutMe}</a>
+                <a href="#anchorToAboutMe">{texts.NavBar.AboutMe}</a>
               </li>
               <div className="blankSpace">
                 <span className="language eng">ENG</span>

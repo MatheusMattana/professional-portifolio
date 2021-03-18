@@ -31,6 +31,7 @@
     "MyPortifolio": {
       "Title": "My portifolio",
       "Netflix": "This project seeks to imitate some basic aspects of the Netflix front-end, using a movie search API.",
+      "HelthyDev": "This app aims to combine the pomodoro technique with exercise tips for developers who spend a lot of time sitting in the chair, doing harm to their bodies. ",
       "React": "Made with React",
       "Soon": "Coming soon!"
     }
@@ -67,6 +68,7 @@
     "MyPortifolio": {
       "Title": "Meu portifólio",
       "Netflix": "Esse projeto busca imitar alguns aspectos básicos do front-end do Netflix, utilizando de uma API de busca de filmes",
+      "HelthyDev": "Este app visa juntar a técnica pomodoro com dicas de exercícios para os desenvolvedores que passam muito tempo sentados na cadeira, fazendo mal para o seus corpos.",
       "React": "Feito com React",
       "Soon": "Em breve!"
     }

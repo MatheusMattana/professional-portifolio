@@ -33,8 +33,8 @@
   align-items: center;
 }
 
-.navBar-container img {
-  height: 70%;
+.navBar-items-container > a > img {
+  height: 30px;
   transition: ease all 0.5s;
   transform: scale(0.98);
 }
