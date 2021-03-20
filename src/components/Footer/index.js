@@ -16,20 +16,20 @@ const Footer = () => {
         </div>
         <div className="link-container">
           <a
-            href="https://linkedin.com/in/matheus-mattana-17abb9129"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={LinkedinIcon} alt="" />
-          </a>
-        </div>
-        <div className="link-container">
-          <a
             href="https://wa.me/5554991468813"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={WhatsIcon} alt="" />
+          </a>
+        </div>
+        <div className="link-container">
+          <a
+            href="https://linkedin.com/in/matheus-mattana-17abb9129"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={LinkedinIcon} alt="" />
           </a>
         </div>
         <div className="link-container">
