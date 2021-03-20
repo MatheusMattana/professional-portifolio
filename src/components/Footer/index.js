@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
         <div className="link-container">
           <a
-            href="https://wa.me/5551989503323"
+            href="https://wa.me/5554991468813"
             target="_blank"
             rel="noopener noreferrer"
           >
