@@ -375,7 +375,7 @@ input:checked + .slider:before {
 }
 
 .mainSection-presentationTextContainer h1 {
-  font-size: 8vw;
+  font-size: 7vw;
 }
 
 .mainSection-presentationTextContainer p {
@@ -432,15 +432,15 @@ input:checked + .slider:before {
 
   .mainSection-presentationTextContainer h3 {
     font-size: 60px;
-    line-height: 1px;
+    line-height: 20px;
   }
 
   .mainSection-presentationTextContainer h1 {
-    font-size: 86px;
+    font-size: 70px;
   }
 
   .mainSection-presentationTextContainer p {
-    font-size: 36px;
+    font-size: 32px;
     margin-left: 2px;
     line-height: 0;
   }
@@ -664,7 +664,7 @@ input:checked + .slider:before {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-gap: 6px;
+  gap: 6px;
   line-height: 25px;
   font-size: 16px;
   font-weight: 300;
@@ -698,7 +698,7 @@ input:checked + .slider:before {
 
   .aboutMe-presentationText {
     padding: 10px 50px 10px 0;
-    grid-gap: 10px;
+    gap: 10px;
     line-height: 35px;
     font-size: 20px;
   }
