@@ -17,7 +17,6 @@ function AppContainer() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    for (var i = 0; i < 1000000000; i++) {}
     window.addEventListener('load', function (event) {
       setIsLoading(false);
     });
